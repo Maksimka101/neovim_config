@@ -22,7 +22,6 @@ end
 
 vim.cmd([[
   set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
-  tnoremap <Esc> <C-\><C-n>
 ]])
 
 -- Code actions
