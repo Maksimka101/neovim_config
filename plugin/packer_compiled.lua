@@ -134,6 +134,11 @@ _G.packer_plugins = {
     path = "/Users/maksimzemlyanikin/.local/share/nvim/site/pack/packer/start/flutter-tools.nvim",
     url = "https://github.com/akinsho/flutter-tools.nvim"
   },
+  ["formatter.nvim"] = {
+    loaded = true,
+    path = "/Users/maksimzemlyanikin/.local/share/nvim/site/pack/packer/start/formatter.nvim",
+    url = "https://github.com/mhartington/formatter.nvim"
+  },
   ["github-nvim-theme"] = {
     loaded = true,
     path = "/Users/maksimzemlyanikin/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
