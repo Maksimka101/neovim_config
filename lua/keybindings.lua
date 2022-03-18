@@ -67,7 +67,7 @@ map("n", "<space>h", "<C-W>h") -- Select window left
 map("n", "<space>l", "<C-W>l") -- Select window right
 map("n", "<space>k", "<C-W>k") -- Select window up
 map("n", "<space>j", "<C-W>j") -- Select window down
-map("n", "<space>v", "<C-W>v") -- Select window down
+map("n", "<space>v", "<C-W>v") -- Seplit window horizontaly
 mapNCommand("qq", "q!")
 mapNCommand("qa", "qa")
 

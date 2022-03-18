@@ -17,6 +17,9 @@ opt.lazyredraw = true -- Faster scrolling
 
 cmd([[
   set number relativenumber
+"  set spelllang=en,ru
+"  set spellsuggest=best,9
+"  set spell
 ]])
 
 require("trouble").setup {}
@@ -27,11 +30,6 @@ require("goto-preview").setup {}
 require("nvim-treesitter.configs").setup {
   rainbow = {
     enable = false
-    -- disable = { "jsx", "cpp" }, list of languages you want to disable the plugin for
-    -- extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
-    -- max_file_lines = nil, -- Do not enable for files with more than n lines, int
-    -- colors = {}, -- table of hex strings
-    -- termcolors = {} -- table of colour name strings
   }
 }
 require("nvim-autopairs").setup {}
