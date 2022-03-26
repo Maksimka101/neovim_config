@@ -19,12 +19,12 @@ cmp.setup {
   },
   -- Key mapping
   mapping = {
-    ["<C-j>"] = cmp.mapping.select_next_item(),
-    ["<C-k>"] = cmp.mapping.select_prev_item(),
-    ["<C-d>"] = cmp.mapping.scroll_docs(-4),
-    ["<C-u>"] = cmp.mapping.scroll_docs(4),
-    ["<C-l>"] = cmp.mapping.complete(),
-    ["<C-e>"] = cmp.mapping.close(),
+    ["<D-j>"] = cmp.mapping.select_next_item(),
+    ["<D-k>"] = cmp.mapping.select_prev_item(),
+    ["<D-d>"] = cmp.mapping.scroll_docs(-4),
+    ["<D-u>"] = cmp.mapping.scroll_docs(4),
+    ["<D-i>"] = cmp.mapping.complete(),
+    ["<D-e>"] = cmp.mapping.close(),
     ["<CR>"] = cmp.mapping.confirm {
       behavior = cmp.ConfirmBehavior.Replace,
       select = true

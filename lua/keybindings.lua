@@ -13,6 +13,11 @@ local function mapNCommand(lhs, command)
   map("n", lhs, "<CMD>" .. command .. "<CR>")
 end
 
+---@param lhs string
+---@param command string
+local function mapICommand(lhs, command)
+  map("i", lhs, "<CMD>" .. command .. "<CR>")
+end
 --- @param lhs string
 --- @param luaCommand string
 local function mapNLua(lhs, luaCommand)
@@ -37,30 +42,30 @@ mapNCommand("gf", "Trouble quickfix")
 mapNLua("gs", "vim.lsp.buf.signature_help()")
 
 -- Find (files, commands)
-mapNLua("<space>p", "require('telescope.builtin').find_files()")
-mapNLua("<space>r", "require('telescope.builtin').oldfiles()")
-mapNLua("<space>o", "require('telescope.builtin').commands()")
+mapNLua("<D-p>", "require('telescope.builtin').find_files()")
+mapNLua("<D-r>", "require('telescope.builtin').oldfiles()")
+mapNLua("<D-o>", "require('telescope.builtin').commands()")
 
 -- Tabs
-mapNCommand("<space>[", "BufferPrevious")
-mapNCommand("<space>]", "BufferNext")
-mapNCommand("<space>w", "BufferClose")
-mapNCommand("<space>1", "BufferGoto 1")
-mapNCommand("<space>2", "BufferGoto 2")
-mapNCommand("<space>3", "BufferGoto 3")
-mapNCommand("<space>4", "BufferGoto 4")
-mapNCommand("<space>5", "BufferGoto 5")
-mapNCommand("<space>6", "BufferGoto 6")
-mapNCommand("<space>7", "BufferGoto 7")
-mapNCommand("<space>8", "BufferGoto 8")
--- map('n', '<space>9', 'BufferGoto 9') -- Used to open terminal
-mapNCommand("<space>0", "BufferLast")
+mapNCommand("<D-{>", "BufferPrevious")
+mapNCommand("<D-}>", "BufferNext")
+mapNCommand("<D-w>", "BufferClose")
+mapNCommand("<D-1>", "BufferGoto 1")
+mapNCommand("<D-2>", "BufferGoto 2")
+mapNCommand("<D-3>", "BufferGoto 3")
+mapNCommand("<D-4>", "BufferGoto 4")
+mapNCommand("<D-5>", "BufferGoto 5")
+mapNCommand("<D-6>", "BufferGoto 6")
+mapNCommand("<D-7>", "BufferGoto 7")
+mapNCommand("<D-8>", "BufferGoto 8")
+-- map('n', '<D-9>', 'BufferGoto 9') -- Used to open terminal
+mapNCommand("<D-0>", "BufferLast")
 
 -- Extra Windows
-OpenTerminalMapping = "<space>9"
-mapNCommand("<space>m", "Trouble workspace_diagnostics")
-mapNLua("<space>u", "require('telescope.builtin').treesitter()")
-mapNCommand("<space>e", "NvimTreeToggle")
+OpenTerminalMapping = "<D-(>"
+mapNCommand("<D-m>", "Trouble workspace_diagnostics")
+mapNLua("<D-u>", "require('telescope.builtin').treesitter()")
+mapNCommand("<D-e>", "NvimTreeToggle")
 
 -- Manipulate with windows
 map("n", "<space>h", "<C-W>h") -- Select window left
@@ -75,4 +80,5 @@ mapNCommand("qa", "qa")
 -- It stays at `complition_config` because when i creating mapping here complete on enter doesn't works
 
 -- Other
-mapNCommand("<space>s", "Format")
+mapNCommand("<D-s>", "Format")
+mapICommand("<D-s>", "Format")
